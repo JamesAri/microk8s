@@ -1,0 +1,6 @@
+- name: Add hostname line to /etc/hosts
+  become: true
+  lineinfile:
+    path: /etc/hosts
+    line: "{{ ansible_default_ipv4.address }}\t{{ ansible_hostname }} {{ ansible_hostname }}.local"
+    state: present

@@ -1,0 +1,14 @@
+- hosts: all
+  roles:
+    - 'common'
+    - role: 'microk8s-cluster'
+      vars:
+        microk8s_plugins:
+          dns: "1.1.1.1"
+          ingress: true
+          metrics-server: false
+          cert-manager: true
+          openebs: true
+          dashboard: true
+          portainer: true
+          helm3: true

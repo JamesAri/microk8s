@@ -1,0 +1,12 @@
+[microk8s_HA]
+microk8s-controller-pi1 ansible_ssh_host=10.88.99.1
+
+[microk8s_WORKERS]
+microk8s-node-pi2 ansible_ssh_host=10.88.99.2
+microk8s-node-pi3 ansible_ssh_host=10.88.99.3
+microk8s-node-pi4 ansible_ssh_host=10.88.99.4
+
+[all:vars]
+ansible_ssh_user=admin
+ansible_password=passwd4ansible
+microk8s_version=1.23/stable
